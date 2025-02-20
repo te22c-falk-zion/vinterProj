@@ -93,6 +93,7 @@ public class Stage
 
         Console.WriteLine($"The Hero stumbles on a {mapString}");
         Console.WriteLine($"{situString}");
+        
     }
 
     public void useBag(Hero player)
