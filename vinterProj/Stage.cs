@@ -111,12 +111,12 @@ public class Stage
             bagString = Console.ReadLine();
             int.TryParse(bagString,out bagInt);
         }
+        player.backpack.Items[bagInt-1].Use(player);
         if (bagInt == 0)
         {
             Console.WriteLine("Quitting bag...");
             bagLoop = false;
         }
-        player.backpack.Items[bagInt-1].Use(player);
         bagLoop = false;
         }
         
