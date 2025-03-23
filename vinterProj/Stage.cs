@@ -18,6 +18,7 @@ public class Stage
         {
             Console.WriteLine($"Stage {currentStage}");
             Console.WriteLine("The Hero enters a land worthy of exploration and loots it.");
+            ExploreStage();
             Console.ReadLine();
             
         }
@@ -78,7 +79,7 @@ public class Stage
         }
     }
 
-    public void ExploreStage(Hero player)
+    public void ExploreStage()
     {
         string[] maps = { "Forest", "Desert", "Tundra", "Dungeon" };
         string mapString = maps[Random.Shared.Next(maps.Length)];
