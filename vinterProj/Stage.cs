@@ -82,14 +82,14 @@ public class Stage
     public void ExploreStage()
     {
         string[] maps = { "Forest", "Desert", "Tundra", "Dungeon" };
-        string mapString = maps[Random.Shared.Next(maps.Length)];
+        string mapString = maps[Random.Shared.Next(0,maps.Length)];
         string[] situations = {
             "The Hero trips over something, he flips his body over mid air landing perfectly on his feet. He turns around to find a chest poking through the ground and opens it.", 
             "The Hero comes across a corpse. It's rotten beyond recognition, the only things left of them is what's on them. Better you having it than them.",
             "The Hero finds a secret compartment and walks inside. The walls are covered in moss and the air is stale. Whilst there he picks up a useful item.",
             "The Hero just picked this shit up."
             };
-        string situString = situations[Random.Shared.Next(situations.Length)];
+        string situString = situations[Random.Shared.Next(0,situations.Length)];
 
 
         Console.WriteLine($"The Hero stumbles on a {mapString}");
