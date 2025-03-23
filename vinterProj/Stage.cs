@@ -89,7 +89,7 @@ public class Stage
             "The Hero finds a secret compartment and walks inside. The walls are covered in moss and the air is stale. Whilst there he picks up a useful item.",
             "The Hero just picked this shit up."
             };
-        string situString = maps[Random.Shared.Next(situations.Length)];
+        string situString = situations[Random.Shared.Next(situations.Length)];
 
 
         Console.WriteLine($"The Hero stumbles on a {mapString}");
