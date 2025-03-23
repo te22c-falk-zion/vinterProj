@@ -13,6 +13,7 @@ public class Inventory
             Console.WriteLine($"{i+1} {Items[i].name}");
             
         }
+        Console.ReadLine();
     }
     
 
