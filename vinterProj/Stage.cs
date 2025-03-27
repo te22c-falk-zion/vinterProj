@@ -8,7 +8,7 @@ public class Stage
     public bool fightStage;
     public int currentStage;
 
-    public void CreateStage()
+    public void CreateStage(Hero player)
     {
         currentStage++;
         if (Random.Shared.Next(1,3) == 1) {fightStage = true;}
@@ -18,7 +18,7 @@ public class Stage
         {
             Console.WriteLine($"Stage {currentStage}");
             Console.WriteLine("The Hero enters a land worthy of exploration and loots it.");
-            ExploreStage();
+            ExploreStage(player);
             Console.ReadLine();
             
         }
@@ -79,7 +79,7 @@ public class Stage
         }
     }
 
-    public void ExploreStage()
+    public void ExploreStage(Hero player)
     {
         string[] maps = { "Forest", "Desert", "Tundra", "Dungeon" };
         string mapString = maps[Random.Shared.Next(0,maps.Length)];
@@ -94,7 +94,7 @@ public class Stage
 
         Console.WriteLine($"The Hero stumbles on a {mapString}");
         Console.WriteLine($"{situString}");
-        
+        player.GetRandomItem(player);
     }
 
     public void useBag(Hero player)

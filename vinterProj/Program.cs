@@ -22,7 +22,7 @@ while (mainGame == true)
     }
     if (menuInt == 1)
     {
-    stage.CreateStage();
+    stage.CreateStage(hero);
     if(stage.fightStage == true) 
     {
         Demon demon = new();
